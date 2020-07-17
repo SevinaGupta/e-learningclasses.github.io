@@ -1,0 +1,212 @@
+{% extends 'nav.html' %}
+{% block body %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<style type="text/css">
+
+.back{
+	background-image: url('/static/front.webp');
+	width:100%;
+	height:500px;
+   
+}
+.bod{
+	position:fixed;
+	background-color: #b22d27;
+    border:4px solid blue;
+    height:30;
+    text-align:center;
+    width:120;
+    margin-left:-30;}
+
+.time{
+	position:fixed;
+	width:100;
+	height:120;
+	margin-top: 0px;
+	background-color:#b22d27;
+	color:white;
+	text-align:center;
+	margin-left:1400;
+	padding:15;
+    border:6px solid blue;
+    border-radius: 100%;
+    height:112;
+     z-index:50;
+}
+.head{
+    background-image: url('/static/sty4.jpg');
+	width:95%;
+	height:500px;
+	position: absolute;
+	left:50%;
+	top:350%;
+	transform:translate(-50%,-50%);
+    
+    background-size: 100%,100%;
+    box-shadow: 1px 2px 10px 15px;
+    animation: slider 30s infinite linear;
+
+    }
+  @keyframes slider{
+  	0%{ background-image: url("/static/sty4.jpg");}
+  	25%{ background-image: url("/static/sty3.jpg");}
+  	50%{ background-image: url("/static/sty2.jpg");}
+  	75%{ background-image: url("/static/sty1.jpg");}
+  	
+}
+.row{
+	height:100;
+	width:1100;
+	margin:auto;
+	margin-bottom:320;
+}
+
+</style>
+
+<body>
+
+<script>
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			var top = $(document).scrollTop();
+			console.log(top);
+		
+		if ((top > 900 )&&(top<1800)){
+			$('#cardone').addClass("animated bounceInLeft");
+			$('#cardtwo').addClass("animated bounceInLeft");
+	    	$('#cardthree').addClass("animated bounceInLeft");
+			$('#cardfour').addClass("animated bounceInRight");
+			$('#cardfive').addClass("animated bounceInRight");
+	    	$('#cardsix').addClass("animated bounceInRight");
+		}
+		
+		})
+
+	})
+</script>
+</body>
+
+</div>
+
+	</head>
+<div class="back">
+	<div class="time">
+	<p id="Time" ></p><p id="ti"><p id="di" class="bod"></p></p>
+	
+  <script type="text/javascript">
+	var clock=setInterval(clockt,1000)
+	function clockt(){	
+	var d = new Date();
+	var n = d.toLocaleTimeString();
+	document.getElementById("Time").innerHTML=n}
+	var d = new Date();
+	var myDay = d.getDay(); 
+	day=["Sun","Mon","Tue","Wed","Thur","Fri","Sut"]
+	document.getElementById("ti").innerHTML=day[myDay]
+
+    var dt = new Date();
+    document.getElementById("di").innerHTML = dt.toLocaleDateString(); 
+  
+    </script>
+</div>
+
+	<div  style="text-align: center;padding:210; font-size:200%;font-style:italic; color:#44ff22; font-weight:bold">
+
+<h1 >WELCOME TO THE STUDENTS!!</h1>
+<h3>our e-learning site.</h3>	
+</div>
+</div>	
+
+<div class="jumbotron jumbotron-fluid" style="padding-top: 0px;">
+    <div class="container" style="-bottom: 0px;">
+    <h1 class="display-4">B-TECH FIRST YEAR COURSE CONTENT</h1>
+  <p>This site contains my notes and solutions to various problems in some textbooks in physics and related fields. The site is 
+  fairly technical, in that I use whatever mathematics is required to explain the various topics. It is most useful to those who
+  are either taking a structured course at a university or online, or to those who are working through a topic on their own. 
+  Although I've tried to make most articles self-contained, there is no substitute for a good textbook and/or an organized
+  course. As such, I'd strongly recommend you buy a textbook (it doesn't have to be one of the ones I've used; there are many
+  to choose from) and use that as your primary source. There are also many good courses available online for free at such 
+  sites as <a href="https://www.edx.org/">edX</a> and <a href="https://www.coursera.org/">coursera</a>. There is also a large
+  collection of lectures on several areas of physics given by Leonard Susskind on his 
+  <a href="http://theoreticalminimum.com/courses">Theoretical Minimum</a> site.
+  </p>
+   <p>Comments pointing out errors in an article or requesting clarification of some point in an article are welcome. 
+	As this site is not technically a blog, you will need to use the <a href="https://physicspagescomments.wordpress.com" target="_blank">auxiliary blog</a> to post comments.</p> 
+	<h5>If you want to comment on a particular article, PLEASE make sure you include
+	the URL of the article (just copy and paste it from your browser's address bar). Please also note
+	that due to time (and knowledge) limitations, I am not able to work through calculations or explain topics
+	not covered in one of my articles. You are welcome to submit comments of that sort, but I will simply post
+	them in the hope that some other reader will respond.</h5>
+	<p>I will use the <a href="https://physicspagescomments.wordpress.com" target="_blank">auxiliary blog</a> to announce
+	new articles added to the main site, so if you want to be kept up to date, check that blog regularly, or else 
+	subscribe to it for email notifications. I realize this may look like a roundabout way of organizing things, but
+	I don't trust WordPress with anything substantial any more.</p>
+	<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+	<p>If you're seeking help on some topic in physics that isn't covered here, you may find <a href="https://www.physicsforums.com/">
+	Physics Forums</a> helpful.</p>
+	<p>A historical note for those who followed my old physicspages.com site. The original site was run using WordPress, but 
+	the underlying database got corrupted and was not possible to repair, even from the backup. As a result, I've rebuilt the 
+	site without using WordPress, so all the posts are now PDF files. Although PDFs have their problems, in that some browsers
+	don't display them fully without a plugin, they have the advantage that the La tex mathematics displays more neatly,
+	and some symbols not available in WordPress's implementation of Latex are now avaliable.
+</p>
+<div class="row">
+<div class="card " id="cardone" style="width: 18rem; margin-right:50; margin-left: 40;">
+  <img src="/static/physics.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">PHYSICS CLASS</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go TO Course</a>
+  </div>
+</div>
+<div class="card" id="cardtwo"  style="width: 18rem; margin-right:50;">
+  <img src="/static/maths.jpg"  height = 180 class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">MATHEMETICS CLASS</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go TO Course</a>
+  </div>
+</div>
+<div class="card" id="cardthree"  style="width: 18rem;">
+  <img src="/static/electrical.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">ELECTRICAL CLASS</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go TO Course</a>
+  </div>
+</div></div>
+<div class="row">
+<div class="card" id="cardfour" style="width: 18rem; margin-right:50; margin-left: 40;">
+  <img src="/static/compu.jpg" height = 180 class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">COMPUTER SCIENCE CLASS</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go TO Course</a>
+  </div>
+</div>
+<div class="card" id="cardfive" style="width: 18rem; margin-right:50;">
+  <img src="/static/chemistry.jpg" height = 180 class="card-img-top" alt="...">
+  
+  <div class="card-body">
+    <h5 class="card-title">CHEMISTRY CLASS</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go TO Course</a>
+  </div>
+</div>
+<div class="card" id="cardsix" style="width: 18rem;">
+  <img src="/static/eng.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">ENGLISH CLASS</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go TO Course</a>
+  </div>
+</div></div>
+</p>	
+<div class="head" style="padding-top:100;"></div>
+</div>
+</div>
+
+{% endblock %}
+   
+
+

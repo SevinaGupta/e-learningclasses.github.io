@@ -1,0 +1,32 @@
+{% extends 'nav.html' %}
+{% block body %}
+{% include "notify.html" %}
+<link rel="stylesheet" href="\static\button.css">
+
+<div>
+  <div class="card-header" style="font-size:200%;font-style:italic;font-weight:bold;">
+   PLEASE LOGIN FOR LEARNING : 
+  </div>
+  <div style="margin-left:525;margin-top:20; margin-right:525; margin-bottom:20px;padding: 0; border:3px solid green; background-color:#e3e6ea">
+  	<form action="/frame" method='post'>
+  		<P style="font-weight:bold;font-size: 150%;margin-left:10;"><em>enter your username & password :</em></P>
+  		 <div style="padding:50;padding-bottom:20; border:3px;">
+         <label for ="name">UserId :</label><br>
+         <input type="email" id="name" name="UserId" placeholder="abc123@gmil.com" size=40><br>
+         <label for="password">Password :</label><br>
+         <input type="password" id="password" name="password" size=40><br>
+         <input  type="checkbox" id="check" name="remember">
+         <label for="check">Remember Me</label><br><br></div>
+         <button style="margin-left:90px;margin-top:0px"class="blue" type="submit" onclick="#tag">login</button>
+         <button style="margin-left:70px;" class="gray"type="reset" onclick="#tag">reset</button>
+         </form>
+  </div>
+
+  <div style="padding-top:10px;padding-right:200px;padding-bottom:0px;padding-left:50px; border:3px solid green; text-align:center;background-color:#181b1e; ">
+   <footer><p style="color:green; font-weight:bold;">Thankyou for visiting, I hope you are satisfiying our term and conditions.</p></footer>
+</div>
+</div>
+
+{% endblock %}
+  
+    

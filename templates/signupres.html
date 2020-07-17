@@ -1,0 +1,13 @@
+{% extends 'nav.html' %}
+{% block body %}
+<div class="card text-center">
+  <div class="card-header" style="font-size: 150%;"><em><b>
+    THANKYOU CARD!!!!</b></em>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> welcome to my web site</h5>
+    <p class="card-text">THANKYOU FOR SIGN UP {{fname}}</p>
+    <a href="{{url_for('home')}}" class="btn btn-primary" style="background-color:green;">GO TO HOME</a>
+  </div>
+</div>
+{%endblock %}
